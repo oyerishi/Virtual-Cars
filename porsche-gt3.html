@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Porsche GT3</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="index.html">AR/VR Car Showcase</a>
+      </div>
+      <div class="nav-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="#">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="car-model-details">
+      <h1>Porsche GT3</h1>
+      <p>Description of the Porsche GT3 model goes here...</p>
+      <button id="view-3d-model">View 3D Model</button>
+    </div>
+    <div id="3d-model-container"></div>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 AR/VR Car Showcase. All rights reserved.</p>
+    <div class="social-links">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="3d-model.js"></script>
+  <script>
+    const view3DModelButton = document.getElementById('view-3d-model');
+    view3DModelButton.addEventListener('click', () => {
+      const modelContainer = document.getElementById('3d-model-container');
+      modelContainer.style.display = 'block';
+      animate();
+    });
+  </script>
+</body>
+</html>
